@@ -1,0 +1,16 @@
+.App {
+  height: 100vh;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  gap: 8px;
+  color: rgba(255,255,255,0.75)
+}
+
+.content {
+  flex: 1;
+  border-radius: 12px;
+  overflow: hidden;
+}

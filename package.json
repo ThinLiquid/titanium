@@ -1,0 +1,31 @@
+{
+  "name": "vite-template-solid",
+  "version": "0.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "start": "npx tsx server/server.ts",
+    "dev": "vite --host",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "license": "AGPL-3.0-only",
+  "devDependencies": {
+    "typescript": "^5.7.2",
+    "vite": "^6.0.0",
+    "vite-plugin-solid": "^2.11.6"
+  },
+  "dependencies": {
+    "@mercuryworkshop/bare-mux": "^2.1.7",
+    "@mercuryworkshop/epoxy-transport": "^2.1.27",
+    "@mercuryworkshop/libcurl-transport": "^1.5.0",
+    "@mercuryworkshop/wisp-js": "^0.3.3",
+    "@titaniumnetwork-dev/ultraviolet": "^3.2.10",
+    "consola": "^3.4.2",
+    "express": "^5.1.0",
+    "material-symbols": "^0.33.0",
+    "solid-js": "^1.9.5",
+    "vite-plugin-static-copy": "^3.1.1",
+    "wisp-server-node": "^1.1.7"
+  }
+}
