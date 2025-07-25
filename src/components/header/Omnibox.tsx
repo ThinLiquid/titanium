@@ -7,13 +7,28 @@ import IconButton from '../IconButton';
 const Omnibox: Component = () => {
   return (
     <div class={`${layers.layeri} ${styles.omnibox}`}>
-      <div style={{
-        "white-space": 'no-wrap',
-        overflow: 'hidden',
-        "text-overflow": 'ellipsis',
-        width: '100%',
-        height: '12px',
-      }}>https://code.thinliquid.dev/?folder=/files/Data/Programming/thingy</div>
+      <input 
+      contenteditable="true"
+      autocorrect="off"
+      spellcheck="false"
+      autocapitalize='off'
+      autocomplete='off'
+      class={`${styles.searchbar} ${layers.layeri}`}
+      placeholder="Search or enter a URL" 
+      onKeyDown={(e) => {
+        if (e.key == "Enter") {
+          e.preventDefault();
+          let navUrl = (e.target as HTMLInputElement).value;
+          let cFrame = document.createElement("iframe");
+          cFrame.src = navUrl;
+          localStorage.setItem("tabs", JSON.stringify(
+            {
+              cFrame
+            }
+          ))
+        }
+      }}
+      ></input>
     </div>
   );
 };
